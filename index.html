@@ -1,0 +1,49 @@
+<html>
+<script>
+        var answerList = [
+            "✖️",
+            "✖️",
+            "✖️",
+            "◯",
+            "✖️"
+        ];
+
+        function showAnswer() {
+            var choiceNo = document.getElementById("choiceList").value;
+            document.getElementById("answer").innerHTML = "";
+            document.getElementById("answer").innerHTML += "このクイズは、あなたの一般常識レベルがわかります。<br>";
+            document.getElementById("answer").innerHTML += "あなたの答えは、「" + answerList[choiceNo] + "」です。";
+        }
+    </script>
+
+<head>
+<title>HTML文書の例</title>
+全商情報処理検定用
+</head>
+<body bgcolor="#aaffff">
+<center>
+<h1>情報処理検定用語問題</h1></center>
+<hr>
+<p>
+<h3>基本的なタグだけでも簡単にできます</h3>
+　基本的なタグをいくつか知っているだけでも最低限の<B>簡単なHTML文書</B>が作れます。 これにリンクというものをつければ立派なホームページを作ることができます。<BR>
+<h4>さらに応用タグを使うといろいろなことができます。</h4>
+<hr align=center size=10 width=420 color="#20ff00">
+<center><marquee width=300 bgcolor="#ffffff">
+ホームページへようこそ！！
+</marquee></center>
+
+<h1>クイズ</h1>
+<p>日本国内で面積が一番小さい都道府県は？</p>
+<select id="choiceList">
+  <option value="0">島根県</option>
+  <option value="1">沖縄県</option>
+  <option value="2">福井県</option>
+  <option value="3">香川県</option>
+  <option value="4">大阪府</option>
+</select>
+<button onclick="showAnswer()">回答する</button>
+<hr>
+<p id="answer"></p>
+</body>
+</html>
